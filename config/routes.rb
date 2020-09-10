@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-  get 'static_pages/help'
-  get 'static_pages/about'
-  root 'static_pages#home'
+
+  get 'gc_baseball/pitching'
+  get 'gc_baseball/hitting'
+  get 'gc_baseball/strength'
+  resources :users
+  root 'gc_baseball#home'
   
 end
