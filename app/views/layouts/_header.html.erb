@@ -1,12 +1,13 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Home", '#', id: "logo" %>
+    <%= link_to "Home", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/gc_baseball/pitching">Pitching</a></li>
-        <li><a href="/gc_baseball/hitting">Hitting</a></li>
-        <li><a href="/gc_baseball/strength">Strength</a></li>
-        <li><a href="">Log In</a></li>
+        <li><%= link_to "Pitching",     pitching_path %></li>
+        <li><%= link_to "Hitting",      hitting_path %></li>
+        <li><%= link_to "Strength",     strength_path %></li>
+        <li><%= link_to "Log In" %></li>
+        <li><%= link_to "Sign Up",      signup_path %></li>
       </ul>
     </nav>
   </div>
