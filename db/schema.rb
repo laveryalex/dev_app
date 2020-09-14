@@ -10,11 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_225303) do
+ActiveRecord::Schema.define(version: 2020_09_14_023100) do
+
+  create_table "drills", force: :cascade do |t|
+    t.string "performance"
+    t.string "name"
+    t.integer "sets"
+    t.integer "reps"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "excercises", force: :cascade do |t|
+    t.string "type"
+    t.string "name"
+    t.integer "sets"
+    t.integer "reps"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "type"
+    t.string "name"
+    t.integer "sets"
+    t.integer "reps"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.boolean "admin"
+    t.string "position"
+    t.string "name"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
