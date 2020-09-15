@@ -7,27 +7,28 @@ class GcBaseballControllerTest < ActionDispatch::IntegrationTest
   end
   
   test "should get pitching" do
-    get gc_baseball_pitching_url
+    get pitching_path
     assert_response :success
     assert_select "title", "Pitching | #{@base_title}"
   end
 
   test "should get hitting" do
-    get gc_baseball_hitting_url
+    get hitting_path
     assert_response :success
-    assert_select "title", "Hitting | #{@base_title}"
+   assert_select "title", "Hitting | #{@base_title}"
   end
 
   test "should get strength" do
-    get gc_baseball_strength_url
+    get strength_path
     assert_response :success
     assert_select "title", "Strength | #{@base_title}"
   end
 
   test "should get home" do
-    get gc_baseball_home_url
+    get root_path
     assert_response :success
-    assert_select "title", "#{@base_title}"
+    assert_select "iframe"
+    assert_select "title", "Home | #{@base_title}"
   end
 
 end
