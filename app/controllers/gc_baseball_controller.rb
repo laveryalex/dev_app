@@ -1,9 +1,13 @@
 class GcBaseballController < ApplicationController
+
   def setup
     @base_title = "Ruby on Rails Tutorial Sample App"
   end
   
   def pitching
+    drills = Drill.all
+    first = drills.find {|a| a.performance == 'pitching'}
+    @program = first.print_drill
   end
 
   def hitting
@@ -21,11 +25,11 @@ class GcBaseballController < ApplicationController
     @tube = videos.shuffle.first
   end
   
-  
 
   
   def vid
   end
   
+
   
 end
