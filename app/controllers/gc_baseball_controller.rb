@@ -6,8 +6,7 @@ class GcBaseballController < ApplicationController
   
   def pitching
     drills = Drill.all
-    first = drills.find {|a| a.performance == 'pitching'}
-    @program = first.print_drill
+    @pitching = drills.find_all {|a| a.performance == 'pitching'}
   end
 
   def hitting

@@ -1,6 +1,11 @@
 <% provide(:title, "Pitching") %>
-<h1>GcBaseballcd</h1>
+<h1>GcBaseball Pitching</h1>
 
-<p>This is where users will see pitching programming and resources
-<%= @program %>
+<p>This is where users will see pitching programming and resources </p>
+<p>
+<% @pitching.each do | pitch | %>
+
+<li><%= pitch.print_drill %></li>
+
+<% end %>
 </p>
