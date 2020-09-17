@@ -1,21 +1,26 @@
 class DrillsController < ApplicationController
-   def drillform
-        @drill = Drill.new
+   
+  def show
+    @drill = Drill.find(params[:name])
+  end
+   
+   def new
+       @drill = Drill.new
    end
    
    def create
-     @drill = Drill.new(params[:drill])
+     @drill = Drill.create(drill_params)
      if @drill.save
         redirect_to "/pitching"
      else
-        render 'drillform'
+        render 'new'
      end
    end
    
    private
 
     def drill_params
-      params.require(:name, :performance).permit(:sets, :reps, :description)
+      params.permit(:sets, :name, :performance, :reps, :description)
     end
   
   
