@@ -10,6 +10,7 @@ gem 'yt'
 gem 'autoprefixer-rails'
 gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
+gem 'bcrypt',         '3.1.13'
 gem 'bootsnap',   '1.4.6', require: false
 
 group :development, :test do
