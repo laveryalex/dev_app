@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
   
   
- 
-  get 'drills/new'
   resources :users
-  resources :drillform
+  resources :drills
   get '/pitching', to: 'gc_baseball#pitching'
   get '/hitting', to: 'gc_baseball#hitting'
   get '/strength', to: 'gc_baseball#strength'
-  get '/drills', to: 'drills#new'
-  post '/drills', to: 'drills#create'
+  get '/add_drill', to: 'drills#new'
+  get '/add_user', to: 'users#new'
  
   root 'gc_baseball#home'
   
