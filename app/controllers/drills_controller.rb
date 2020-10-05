@@ -1,8 +1,8 @@
 class DrillsController < ApplicationController
    
-  def show
-    @drill = Drill.find(params[:name])
-  end
+   def show
+      @drill = Drill.find(params[:name])
+   end
    
    def new
        @drill = Drill.new
