@@ -1,0 +1,28 @@
+
+<h1><center>Welcome</center></h1>
+<div
+<center> <%= @user.name %>, <%= @user.email %></center> 
+
+</div>
+
+<div>
+    <center><h1>Heres a workout for you to do today.</h1></center>
+    <h2><center>Throwing</center></h2>
+    
+    <% @pitching.each do | pitch | %>
+    
+    <li><%= pitch.print_drill_list %></li> <% end %>
+    
+    <h2><center>Hitting</center></h2>
+    
+    <% @hitting.each do | hit | %>
+    
+    <li><%= hit.print_drill_list %></li><% end %>
+    
+    <h2><center>Lifting</center></h2>
+    
+    <% @strength.each do | pitch | %>
+    
+    <li><%= strength.print_drill_list %></li><% end %>
+    
+</div>

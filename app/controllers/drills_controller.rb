@@ -4,6 +4,9 @@ class DrillsController < ApplicationController
       @drill = Drill.find(params[:name])
    end
    
+   def index
+   end
+   
    def new
        @drill = Drill.new
    end
@@ -11,7 +14,7 @@ class DrillsController < ApplicationController
    def create
      @drill = Drill.create(drill_params)
      if @drill.save
-        redirect_to "/pitching"
+        redirect_to @drill
      else
         render 'new'
      end
