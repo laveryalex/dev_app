@@ -2,6 +2,10 @@ class UsersController < ApplicationController
     
   def show
     @user = User.find(params[:id])
+    drills = Drill.all
+    @pitching = drills.find_all {|a| a.performance == 'pitching'}
+    @hitting = drills.find_all {|a| a.performance == 'hitting'}
+    @strength = drills.find_all {|a| a.performance == 'Strength'}
   end
 
   def new
