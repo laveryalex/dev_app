@@ -1,7 +1,7 @@
 class DrillsController < ApplicationController
    
    def show
-      @drill = Drill.find(params[:name])
+      @drill = Drill.find(params[:id])
    end
    
    def index
