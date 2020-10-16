@@ -10,9 +10,13 @@ class GcBaseballController < ApplicationController
   end
 
   def hitting
+    drills = Drill.all
+    @hitting = drills.find_all {|a| a.performance == 'hitting'}
   end
 
   def strength
+     drills = Drill.all
+    @strength = drills.find_all {|a| a.performance == 'Strength'}
   end
 
   def home
