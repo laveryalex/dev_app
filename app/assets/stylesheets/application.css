@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+.active  .collapse{
+  background-color: inherit;
+}
+
+.panel-heading {
+  color: white !important;
+  background-color: red !important;
+}
+
+.panel-collapse {
+  padding: 10px;
+  background-color: white !important;
+  color: black !important;
+}
+.panel-body {
+  padding: 10px;
+  font-size: 24px;
+}
+
+ h4 a:hover {
+ text-decoration: underline;
+ color: white;
+}
